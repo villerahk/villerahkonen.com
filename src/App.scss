@@ -1,0 +1,74 @@
+$primary: #3B3B3B;
+$secondary: #FFFFFF;
+$navbar-background: #222222;
+
+$effect1: #A89F85;
+$support1: #645C48;
+
+$effect2: #51789A;
+$support2: #425667;
+
+.App {
+  height: 100vh;
+  text-align: center;
+  background-color: $primary;
+  color: $secondary;
+}
+
+.SplashScreen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary;
+}
+
+.LogoFrame {
+  width: 40vw;
+  max-width: 275px;
+  height: 80vh;
+  max-height: 300px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.Logo {
+  max-width: 250px;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.MuiLinearProgress-barColorPrimary {
+  background-color: $effect1 !important;
+}
+
+.MuiLinearProgress-colorPrimary {
+  background-color: $secondary !important;
+}
+
+.MuiLinearProgress-root {
+  max-width: 275px;
+  width: 100%;
+  height: 15px !important;
+  border-radius: 5px;
+  top: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+p {
+  margin: 0;
+  font-size: 12px;
+}
