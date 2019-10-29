@@ -1,0 +1,31 @@
+$primary: #3B3B3B;
+$secondary: #FFFFFF;
+$navbar-background: #222222;
+
+$effect1: #A89F85;
+$support1: #645C48;
+
+$effect2: #51789A;
+$support2: #425667;
+
+.MuiAppBar-colorPrimary {
+    color: $secondary !important;
+    background-color: $navbar-background !important;
+}
+
+.MuiTypography-h3 {
+    font-family: 'Antic Slab', serif !important;
+    font-size: 24px !important;
+}
+
+.MuiToolbar-root {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between !important;
+}
+
+.NavLogo {
+    width: 36px;
+    height: auto;
+}
