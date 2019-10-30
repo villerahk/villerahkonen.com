@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 import HomePage from './pages/home.page/home.page.jsx';
-import NavBar from './components/nav.bar/nav.bar.jsx';
+import NavBar from './components/navbar.component/navbar.component.jsx';
 
 import logo from './images/ville-logo.png';
 
@@ -57,15 +57,10 @@ render(){
     else {
       return (
         <div className="App">
-        <NavBar/>
-        
-        <Switch>
-          <Route exact path="/" render={() => <HomePage/>} />
-        </Switch>
-
-        
-
-
+          <NavBar/>   
+            <Switch>
+              <Route exact path="/" render={() => <HomePage />} />
+            </Switch>
         </div>)}
 
 }
