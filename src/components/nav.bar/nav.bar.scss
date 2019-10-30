@@ -25,7 +25,31 @@ $support2: #425667;
     justify-content: space-between !important;
 }
 
+@media (min-width: 0px) and (orientation: landscape) {
+.MuiToolbar-regular {
+    min-height: 56px !important;
+}
+}
+
 .NavLogo {
     width: 36px;
     height: auto;
+}
+
+.NavMenu {
+    width: 100vw;
+    height: 100px;
+    background-color: $navbar-background;
+    position: fixed;
+    margin-top: 56px;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+a {
+    color: $secondary;
+    text-decoration: none;
+    font-size: 24px;
 }

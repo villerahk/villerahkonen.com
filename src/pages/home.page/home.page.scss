@@ -1,0 +1,14 @@
+.Design {
+    width: 100%;
+  }
+  
+  .WelcomeText {
+    margin: 0 auto 50px auto;
+    max-width: 460px;
+  }
+  
+  .Ville {
+    max-width: 100%;
+    height: auto;
+    clip-path: polygon(100% 100%, 100% 10%, 0% 0%, 0 100%);
+  }

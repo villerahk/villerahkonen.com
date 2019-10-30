@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
+import { Route, Switch } from "react-router-dom";
 
 import LinearProgress from '@material-ui/core/LinearProgress';
 
+import HomePage from './pages/home.page/home.page.jsx';
 import NavBar from './components/nav.bar/nav.bar.jsx';
 
 import logo from './images/ville-logo.png';
+
 import './App.scss';
 
 class App extends Component {
@@ -55,13 +58,14 @@ render(){
       return (
         <div className="App">
         <NavBar/>
-        <div className="Content">
+        
+        <Switch>
+          <Route exact path="/" render={() => <HomePage/>} />
+        </Switch>
 
-        <p>Hey,  and  welcome  to  my  website!  My  name  is  Ville  Rahkonen,  I’m  26  years  old  Software  Engineer  from  Hämeenlinna,  Finland.  
-        On  this  website  you  can  find  my  latest  projects  and  contact  information.  If  you  want  to  know  more  about  my  work  experience  and  education,  please  visit  my  LinkedIn  profile. 
-         I’m  currently  looking  for  work  anywhere  in  the  world  and  I’m  available  to  relocate  and  start  in  February  2020.  Please  don’t  hesitate  in  contacting  me,  I  would  love  to  hear  about  your  company.</p>
+        
 
-        </div>
+
         </div>)}
 
 }
