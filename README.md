@@ -8,10 +8,10 @@ This project's objective is to demonstrate "a professional-like process" of crea
 
 ### Steps of the project
 
-1. Set up a Trello board for projects progress management.
-2. Design a prototype using Adobe XD.
-3. Document a style guide according to prototype's plans for development.
-4. Document React component hierarchy and data flow for development.
+1. Set up a Trello board for projects progress management. [Screenshot of the board](https://raw.githubusercontent.com/villerahk/villerahkonen.com/master/documents/Trello-Screenshot.png)
+2. Design a prototype using Adobe XD. [Sketches (PDF)](https://github.com/villerahk/villerahkonen.com/blob/master/documents/VilleRahkonen.com-prototype-sketches.pdf)
+3. Document a style guide according to prototype's plans for development. [Style Guide (PDF)](https://github.com/villerahk/villerahkonen.com/blob/master/documents/Style%20Guide.pdf)
+4. Document React component hierarchy and data flow for development. [Hierarchy document (PDF)](https://github.com/villerahk/villerahkonen.com/blob/master/documents/Component%20Hierarchy%20%26%20Data%20Flow.pdf)
 5. Make rest of the tech choices for development.
 6. Set up a repository for the project on GitHub.
 7. Start development with 'Create React App'.
