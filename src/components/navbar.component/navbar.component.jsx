@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import { Link } from 'react-router-dom';
 
-import { AppBar, Toolbar, IconButton, Typography, Icon } from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Typography, Icon, Tabs, Tab } from '@material-ui/core';
 
 import logo from '../../images/ville-logo.png';
 import './navbar.component.scss';
@@ -13,6 +13,7 @@ class NavBar extends Component {
 
         this.state = {
           selectedPage: 'Home',
+          selectedTab: 0,
           menuClosed: true
         }
 
@@ -36,15 +37,20 @@ menuButtonClick(){
 }
 
 selectedPage(x){
+  let y = 0
+  if (x === 'Home') {y = 0}
+  else if (x === 'Projects') {y = 1}
+  else {y = 2}
   this.setState({
     selectedPage: x,
+    selectedTab: y,
     menuClosed: true
   })
 }
 
 render(){
 
-  const {selectedPage, menuClosed} = this.state
+  const {selectedPage, selectedTab, menuClosed} = this.state
 
   if (window.innerWidth < 1366) {
 
@@ -68,7 +74,26 @@ render(){
         
     </AppBar>
 
-    )} else {return null}
+    )} else {return (
+      <Fragment>
+      <div className="NavBarDesktop">
+
+        <div className="ColumnLogo">
+          <img id="NavBar" src={logo} alt="logo" className="NavLogo" />
+        </div>
+
+        <div className="ColumnNavigation">
+          <Tabs variant="fullWidth" value={selectedTab} indicatorColor="primary" textColor="primary" centered>  
+            <Tab label="Home" component={Link} to={"/"} onClick={() => this.selectedPage('Home')}></Tab>
+            <Tab label="Projects" component={Link} to={"/projects/"} onClick={() => this.selectedPage('Projects')}></Tab>
+            <Tab label="Contact" component={Link} to={"/contact/"} onClick={() => this.selectedPage('Contact')}></Tab>
+          </Tabs>
+        </div>
+
+      </div>
+      <div className="ColumnImage" />
+    </Fragment>
+    )}
 }
 }
 

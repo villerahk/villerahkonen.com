@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 
 import design from '../../images/design1.png';
-import villeLg from '../../images/ville-bnw.png';
 import villeSm from '../../images/ville-bnw-small.png';
 
 import './home.page.scss';
@@ -41,7 +40,6 @@ export default function HomePage() {
             </div>
             </div>
 
-            <img src={villeLg} alt="Ville" className="Ville" />
         </Fragment>
     )}
 } 

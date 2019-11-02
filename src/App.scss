@@ -10,7 +10,6 @@ $support2: #425667;
 
 .App {
   height: 100vh;
-  text-align: center;
   background-color: $primary;
   color: $secondary;
 }
@@ -77,4 +76,14 @@ p {
 .Content {
   padding: 0px 15px;
   margin-top: 120px;
+}
+
+@media only screen and (min-width: 1366px) {
+
+  .Content {
+    width: 800px;
+    margin: 0 0 0 calc((72vw - 978px) / 2 + 178px);
+    padding: 0;
+  }
+
 }

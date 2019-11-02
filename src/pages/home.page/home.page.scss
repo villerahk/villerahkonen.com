@@ -3,12 +3,29 @@
   }
   
   .WelcomeText {
-    margin: 0 auto 50px auto;
+    margin: auto;
     max-width: 460px;
   }
   
   .Ville {
+    display: block;
     max-width: 100%;
+    margin: 50px auto 0 auto;
     height: auto;
     clip-path: polygon(100% 100%, 100% 10%, 0% 0%, 0 100%);
+  }
+
+  @media only screen and (min-width: 1366px) {
+
+    .WelcomeText {
+      margin: auto;
+      max-width: 800px;
+      margin-top: 150px;
+    }
+
+    .WelcomeText p {
+      text-align: center;
+      font-size: 26px;
+    }
+
   }

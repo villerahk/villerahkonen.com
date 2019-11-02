@@ -25,16 +25,6 @@ $support2: #425667;
     justify-content: space-between !important;
 }
 
-@media (min-width: 0px) and (orientation: landscape) {
-.MuiToolbar-regular {
-    min-height: 56px !important;
-}
-}
-
-// .MuiIcon-root {
-//     color: $effect1;
-// }
-
 .NavLogo {
     width: 36px;
     height: auto;
@@ -50,10 +40,89 @@ $support2: #425667;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    text-align: center;
 }
 
 a {
     color: $secondary;
     text-decoration: none;
     font-size: 24px;
+}
+
+.ColumnImage {
+    display: none;
+}
+
+@media only screen and (min-width: 1366px) {
+
+    .MuiTab-root {
+        font-family: 'Antic Slab', serif !important;
+        font-size: 32px !important;
+        text-transform: none !important;
+    }
+
+    .MuiTab-textColorPrimary.Mui-selected {
+        color: $effect1 !important;
+    }
+
+    .MuiTab-textColorPrimary {
+        color: $secondary !important;
+    }
+
+    .ColumnNavigation > div > div > span {
+        height: 5px !important;
+        background-color: $effect1 !important;
+    }
+
+    .NavBarDesktop {
+        width: 72vw;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .ColumnLogo{
+        width: 178px;
+    }
+
+    .ColumnNavigation {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 800px;
+    }
+
+    .ColumnImage {
+        display: inline-flex;
+        position: absolute;
+        width: 28vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      
+        background-image: url("../../images/ville-bnw.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 35% 100%);
+      }
+
+    .NavLogo {
+        width: 138px;
+        height: auto;
+        padding: 20px 20px 0px 20px;
+    }
+
+}
+
+@media (min-width: 0px) and (orientation: landscape) {
+
+    .MuiToolbar-regular {
+        min-height: 56px !important;
+    }
+    
 }

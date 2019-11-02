@@ -44,7 +44,6 @@ countTo100(n){
 }
 
 clickCheck(e) {
-  console.log(e.target.id)
   if (e.target.id !== "NavBar") {
     this.setState({
       clickHappened: true
@@ -65,23 +64,28 @@ render(){
     if (!loadingDone) {
       return (
         <div className="App">
-        <div className="SplashScreen">
-        <div className="LogoFrame">
-        <img src={logo} alt="Logo" className="Logo" />
-        <LinearProgress variant="determinate" value={loadingValue} />
+          <div className="SplashScreen">
+            <div className="LogoFrame">
+              <img src={logo} alt="Logo" className="Logo" />
+              <LinearProgress variant="determinate" value={loadingValue} />
+            </div>
+          </div>
         </div>
-        </div></div>)}
+        )}
 
     else {
       return (
         <div className="App" onClick={(e) => this.clickCheck(e)}>
+
           <NavBar clickHappened={this.state.clickHappened} resetClick={this.resetClick} />   
+
             <Switch>
               <Route exact path="/" render={() => <HomePage />} />
             </Switch>
-        </div>)}
 
-}
+        </div>
+        )}
+  }
 }
 
 export default App;
