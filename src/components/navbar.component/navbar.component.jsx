@@ -8,14 +8,25 @@ import './navbar.component.scss';
 
 class NavBar extends Component {
 
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
 
         this.state = {
           selectedPage: 'Home',
           menuClosed: true
         }
 
+  }
+
+  componentDidUpdate(){
+    if (!this.state.menuClosed && this.props.clickHappened) {
+      this.setState({
+        menuClosed: true
+      })
+    }
+    if (this.state.menuClosed && this.props.clickHappened) {
+      this.props.resetClick()
+    }
   }
 
 menuButtonClick(){
@@ -39,17 +50,17 @@ render(){
 
     return(
 
-    <AppBar position="fixed">
-      <Toolbar>
+    <AppBar id="NavBar" position="fixed">
+      <Toolbar id="NavBar">
     
-        <img src={logo} alt="logo" className="NavLogo" />
-        <Typography variant="h3" align="center">{selectedPage}</Typography>
-        <IconButton edge="end" className="" color="inherit" aria-label="menu" onClick={() => this.menuButtonClick()}>
-        <Icon style={{ color: menuClosed? '#FFF' : '#A89F85' }}>menu</Icon></IconButton>
+        <img id="NavBar" src={logo} alt="logo" className="NavLogo" />
+        <Typography id="NavBar" variant="h3" align="center">{selectedPage}</Typography>
+        <IconButton id="NavBar" edge="end" className="" color="inherit" aria-label="menu" onClick={() => this.menuButtonClick()}>
+        <Icon id="NavBar" style={{ color: menuClosed? '#FFF' : '#A89F85' }}>menu</Icon></IconButton>
 
       </Toolbar>
 
-        <div className="NavMenu" style={{ display: menuClosed? 'none' : 'flex' }}>
+        <div id="NavBar" className="NavMenu" style={{ display: menuClosed? 'none' : 'flex' }}>
         <Link to="/" style={{ display: selectedPage === 'Home'? 'none' : 'block' }} onClick={() => this.selectedPage('Home')}>Home</Link>
         <Link to="/projects/" style={{ display: selectedPage === 'Projects'? 'none' : 'block' }} onClick={() => this.selectedPage('Projects')}>Projects</Link>
         <Link to="/contact/" style={{ display: selectedPage === 'Contact'? 'none' : 'block' }} onClick={() => this.selectedPage('Contact')}>Contact</Link>

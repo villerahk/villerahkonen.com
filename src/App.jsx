@@ -17,8 +17,11 @@ constructor(){
 
   this.state = {
     loadingDone: false,
-    loadingValue: 0
+    loadingValue: 0,
+    clickHappened: false
   }
+
+  this.resetClick = this.resetClick.bind(this);
 }
 
 componentDidMount() {
@@ -40,6 +43,21 @@ countTo100(n){
   }
 }
 
+clickCheck(e) {
+  console.log(e.target.id)
+  if (e.target.id !== "NavBar") {
+    this.setState({
+      clickHappened: true
+    })
+  }
+}
+
+resetClick(){
+  this.setState({
+    clickHappened: false
+  })
+}
+
 render(){
 
   const {loadingDone, loadingValue} = this.state
@@ -56,8 +74,8 @@ render(){
 
     else {
       return (
-        <div className="App">
-          <NavBar/>   
+        <div className="App" onClick={(e) => this.clickCheck(e)}>
+          <NavBar clickHappened={this.state.clickHappened} resetClick={this.resetClick} />   
             <Switch>
               <Route exact path="/" render={() => <HomePage />} />
             </Switch>
