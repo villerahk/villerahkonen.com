@@ -2,13 +2,25 @@ import React, { Component, Fragment } from 'react';
 
 import NavBar from '../../components/navbar.component/navbar.component';
 
+import { Button } from '@material-ui/core';
+
 import design from '../../images/design1.png';
 import villeSm from '../../images/ville-bnw-small.png';
+import linkedIn from '../../images/linkdin.png';
+import gmail from '../../images/gmail.png';
 
 import './contact.page.scss';
 
 class ContactPage extends Component {
 
+copyEmail(){
+    const emailAddress = document.getElementById("myInput");
+    emailAddress.select()
+    emailAddress.setSelectionRange(0,26)
+    document.execCommand("copy")
+    alert("Copied the email address to your clipboard: " + emailAddress.value)
+}
+asd
     render(){
 
     if (window.innerWidth < 1366) {
@@ -20,8 +32,17 @@ class ContactPage extends Component {
             <div className="WelcomeText">
 
                 <img src={design} alt="Design" className="Design" />
-                <p>I’m currently looking for work anywhere in the world and I’m available to relocate and start in February 2020. Please don’t hesitate in contacting me, I would love to hear about your company.</p>
+                <p>You made it this far on my website, so why don't you send me an email or a LinkedIn connection request? Let's combine efficient cutting edge code and cool design to your projects as well!</p>
+                <p>I’m seriously looking for work anywhere in the world and I’m available to relocate and start in February 2020. Please don’t hesitate in contacting me, I would love to hear about your company.</p>
+                
+
+                <div className="ContactButtons">
+                <Button onClick={() => this.copyEmail()}>Email Me<img src={gmail} alt="Gmail" className="Gmail" /></Button>
+                <a href="https://www.linkedin.com/in/ville-rahkonen-685117137/" target="_blank" rel="noopener noreferrer"><Button><img src={linkedIn} alt="LinkedIn" className="LinkedIn" /></Button></a>
+                </div>
+
                 <img src={design} alt="Design" className="Design" />
+                <input type="text" value="ville.rahkonen10@gmail.com" id="myInput" />
             </div>
             </div>
 
@@ -37,8 +58,16 @@ class ContactPage extends Component {
             <div className="WelcomeText">
 
                 <img src={design} alt="Design" className="Design" />
-                    <p>I’m currently looking for work anywhere in the world and I’m available to relocate and start in February 2020. Please don’t hesitate in contacting me, I would love to hear about your company.</p>
+                <p>You made it this far on my website, so why don't you send me an email or a LinkedIn connection request? Let's combine efficient cutting edge code and cool design to your projects as well!</p>
+                <p>I’m seriously looking for work anywhere in the world and I’m available to relocate and start in February 2020. Please don’t hesitate in contacting me, I would love to hear about your company.</p>
+
+                <div className="ContactButtons">
+                <Button onClick={() => this.copyEmail()}>Email Me<img src={gmail} alt="Gmail" className="Gmail" /></Button>
+                <a href="https://www.linkedin.com/in/ville-rahkonen-685117137/" target="_blank" rel="noopener noreferrer"><Button><img src={linkedIn} alt="LinkedIn" className="LinkedIn" /></Button></a>
+                </div>
+
                 <img src={design} alt="Design" className="Design" />
+                <input type="text" value="ville.rahkonen10@gmail.com" id="myInput" />
             </div>
             </div>
 
