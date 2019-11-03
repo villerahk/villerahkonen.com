@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 import HomePage from './pages/home.page/home.page.jsx';
+import ProjectsPage from './pages/projects.page/projects.page.jsx';
 import ContactPage from './pages/contact.page/contact.page.jsx';
 
 import logo from './images/ville-logo.png';
@@ -79,6 +80,7 @@ render(){
 
             <Switch>
               <Route exact path="/" render={(route) => <HomePage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
+              <Route exact path="/projects/" render={(route) => <ProjectsPage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
               <Route exact path="/contact/" render={(route) => <ContactPage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
             </Switch>
 
