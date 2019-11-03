@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 import HomePage from './pages/home.page/home.page.jsx';
-import NavBar from './components/navbar.component/navbar.component.jsx';
+import ContactPage from './pages/contact.page/contact.page.jsx';
 
 import logo from './images/ville-logo.png';
 
@@ -77,10 +77,9 @@ render(){
       return (
         <div className="App" onClick={(e) => this.clickCheck(e)}>
 
-          <NavBar clickHappened={this.state.clickHappened} resetClick={this.resetClick} />   
-
             <Switch>
-              <Route exact path="/" render={() => <HomePage />} />
+              <Route exact path="/" render={(route) => <HomePage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
+              <Route exact path="/contact/" render={(route) => <ContactPage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
             </Switch>
 
         </div>

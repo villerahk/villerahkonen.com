@@ -19,13 +19,33 @@ class NavBar extends Component {
 
   }
 
+  componentDidMount(){
+
+    const { path } = this.props.match
+    
+      if (path === '/'){
+        this.selectedPage('Home')
+
+        } else if (path === '/projects/') {
+          this.selectedPage('Projects')
+
+          } else if (path === '/contact/') {
+            this.selectedPage('Contact')
+
+        } else {console.log('Something went wrong with navbar.component.jsx.')}
+    
+  }
+
   componentDidUpdate(){
-    if (!this.state.menuClosed && this.props.clickHappened) {
+    const { menuClosed } = this.state
+    const { clickHappened } = this.props
+
+    if (!menuClosed && clickHappened) {
       this.setState({
         menuClosed: true
       })
     }
-    if (this.state.menuClosed && this.props.clickHappened) {
+    if (menuClosed && clickHappened) {
       this.props.resetClick()
     }
   }
