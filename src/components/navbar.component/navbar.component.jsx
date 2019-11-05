@@ -76,7 +76,7 @@ render(){
 
     return(
 
-    <AppBar id="NavBar" position="fixed">
+    <AppBar id="NavBar" position="fixed" color="inherit">
       <Toolbar id="NavBar">
     
         <img id="NavBar" src={logo} alt="logo" className="NavLogo" />
@@ -104,7 +104,7 @@ render(){
 
         <div className="ColumnNavigation">
           <Tabs variant="fullWidth" value={selectedTab} indicatorColor="primary" textColor="primary" centered>  
-            <Tab label="Home" component={Link} to={"/"} onClick={() => this.selectedPage('Home')}></Tab>
+            <Tab label="Home" component={Link} to={"/"} color="primary" onClick={() => this.selectedPage('Home')}></Tab>
             <Tab label="Projects" component={Link} to={"/projects/"} onClick={() => this.selectedPage('Projects')}></Tab>
             <Tab label="Contact" component={Link} to={"/contact/"} onClick={() => this.selectedPage('Contact')}></Tab>
           </Tabs>

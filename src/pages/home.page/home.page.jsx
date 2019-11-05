@@ -15,7 +15,7 @@ class HomePage extends Component {
 
     return(
         <Fragment>
-            <NavBar match={this.props.match} clickHappened={this.props.clickHappened} resetClick={this.props.resetClick}/>
+            <NavBar match={this.props.match} clickHappened={this.props.clickHappened} resetClick={this.props.resetClick} color="secondary"/>
             <div className="Content">
             <div className="WelcomeText">
 

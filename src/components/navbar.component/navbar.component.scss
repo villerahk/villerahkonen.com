@@ -8,10 +8,10 @@ $support1: #645C48;
 $effect2: #51789A;
 $support2: #425667;
 
-.MuiAppBar-colorPrimary {
-    color: $secondary !important;
-    background-color: $navbar-background !important;
-}
+// .MuiAppBar-colorPrimary {
+//     // color: $secondary !important;
+//     // background-color: $navbar-background !important;
+// }
 
 .MuiTypography-h3 {
     font-family: 'Antic Slab', serif !important;
@@ -71,7 +71,7 @@ a {
 
     .ColumnNavigation > div > div > span {
         height: 5px !important;
-        background-color: $effect1 !important;
+        // background-color: $effect1 !important;
     }
 
     .NavBarDesktop {

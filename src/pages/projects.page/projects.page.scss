@@ -28,12 +28,17 @@ $support2: #425667;
     width: 120px;
     height: 40px;
 
-    background-color: $effect1 !important;
-    border: 1px solid $support1 !important;
-
-    color: $secondary !important;
+    // color: $secondary !important;
     font-family: 'Antic Slab', serif !important;
     font-size: 14px !important;
+  }
+
+  .GitHubButton {
+    background-color: $navbar-background !important;
+  }
+
+  .GitHubButton:hover {
+    background-color: #111111 !important;
   }
 }
   
@@ -67,10 +72,7 @@ $support2: #425667;
           width: 145px;
           height: 45px;
     
-          background-color: $effect1 !important;
-          border: 1px solid $support1 !important;
-    
-          color: $secondary !important;
+          // color: $secondary !important;
           font-family: 'Antic Slab', serif !important;
           font-size: 15px !important;
         }

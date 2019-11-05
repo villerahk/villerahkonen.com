@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { Route, Switch } from "react-router-dom";
 
 import LinearProgress from '@material-ui/core/LinearProgress';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import palette from './theme.json';
 
 import HomePage from './pages/home.page/home.page.jsx';
 import ProjectsPage from './pages/projects.page/projects.page.jsx';
@@ -10,6 +12,8 @@ import ContactPage from './pages/contact.page/contact.page.jsx';
 import logo from './images/ville-logo.png';
 
 import './App.scss';
+
+const theme = createMuiTheme(palette)
 
 class App extends Component {
 
@@ -65,26 +69,29 @@ render(){
     if (!loadingDone) {
       return (
         <div className="App">
+        <ThemeProvider theme={theme}>
           <div className="SplashScreen">
             <div className="LogoFrame">
               <img src={logo} alt="Logo" className="Logo" />
-              <LinearProgress variant="determinate" value={loadingValue} />
+              <LinearProgress variant="determinate" value={loadingValue} color="primary" />
             </div>
           </div>
+          </ThemeProvider>
         </div>
         )}
 
     else {
       return (
+        <ThemeProvider theme={theme}>
         <div className="App" onClick={(e) => this.clickCheck(e)}>
 
             <Switch>
               <Route exact path="/" render={(route) => <HomePage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
               <Route exact path="/projects/" render={(route) => <ProjectsPage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
-              <Route exact path="/contact/" render={(route) => <ContactPage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
+              <Route exact path="/contact/" render={(route) => <ContactPage match={route.match} theme={theme} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
             </Switch>
 
-        </div>
+        </div></ThemeProvider>
         )}
   }
 }
