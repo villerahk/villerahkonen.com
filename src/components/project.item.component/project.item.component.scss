@@ -28,7 +28,6 @@ $support2: #425667;
     width: 120px;
     height: 40px;
 
-    // color: $secondary !important;
     font-family: 'Antic Slab', serif !important;
     font-size: 14px !important;
   }
@@ -41,14 +40,6 @@ $support2: #425667;
     background-color: #111111 !important;
   }
 }
-  
-  .Ville {
-    display: block;
-    max-width: 100%;
-    margin: 50px auto 0 auto;
-    height: auto;
-    clip-path: polygon(100% 100%, 100% 10%, 0% 0%, 0 100%);
-  }
 
   @media only screen and (min-width: 1366px) {
 
@@ -72,7 +63,6 @@ $support2: #425667;
           width: 145px;
           height: 45px;
     
-          // color: $secondary !important;
           font-family: 'Antic Slab', serif !important;
           font-size: 15px !important;
         }

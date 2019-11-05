@@ -8,11 +8,6 @@ $support1: #645C48;
 $effect2: #51789A;
 $support2: #425667;
 
-// .MuiAppBar-colorPrimary {
-//     // color: $secondary !important;
-//     // background-color: $navbar-background !important;
-// }
-
 .MuiTypography-h3 {
     font-family: 'Antic Slab', serif !important;
     font-size: 24px !important;
@@ -71,7 +66,6 @@ a {
 
     .ColumnNavigation > div > div > span {
         height: 5px !important;
-        // background-color: $effect1 !important;
     }
 
     .NavBarDesktop {
@@ -97,7 +91,7 @@ a {
 
     .ColumnImage {
         display: inline-flex;
-        position: absolute;
+        position: fixed;
         width: 28vw;
         height: 100vh;
         margin: 0;
@@ -115,6 +109,7 @@ a {
         width: 138px;
         height: auto;
         padding: 20px 20px 0px 20px;
+        position: fixed;
     }
 
 }

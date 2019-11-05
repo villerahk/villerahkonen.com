@@ -48,14 +48,6 @@ $support2: #425667;
   right: 0;
 }
 
-.MuiLinearProgress-barColorPrimary {
-  // background-color: $effect1 !important;
-}
-
-.MuiLinearProgress-colorPrimary {
-  // background-color: $secondary !important;
-}
-
 .MuiLinearProgress-root {
   max-width: 275px;
   width: 100%;
@@ -79,11 +71,19 @@ p {
   margin-top: 120px;
 }
 
+.Ville {
+  display: block;
+  max-width: 100%;
+  margin: 50px auto 0 auto;
+  height: auto;
+  clip-path: polygon(100% 100%, 100% 10%, 0% 0%, 0 100%);
+}
+
 @media only screen and (min-width: 1366px) {
 
   .Content {
     width: 800px;
-    margin: 0 0 0 calc((72vw - 978px) / 2 + 178px);
+    margin: 70px 0 0 calc((72vw - 978px) / 2 + 178px);
     padding: 0;
   }
 
