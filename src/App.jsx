@@ -6,8 +6,9 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import palette from './theme.json';
 
 import HomePage from './pages/home.page/home.page.jsx';
-import ProjectsPage from './pages/projects.page/projects.page.jsx';
 import ContactPage from './pages/contact.page/contact.page.jsx';
+import ProjectsPage from './pages/projects.page/projects.page.jsx';
+import SelectedProjectPage from './pages/selected.project.page/selected.project.page.jsx';
 
 import logo from './images/ville-logo.png';
 
@@ -86,8 +87,9 @@ render(){
         <div className="App" onClick={(e) => this.clickCheck(e)}>
 
             <Switch>
-              <Route exact path="/" render={(route) => <HomePage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
+              <Route exact path="/" render={(route) => <HomePage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />   
               <Route exact path="/projects/" render={(route) => <ProjectsPage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
+              <Route exact path="/projects/:id" render={(route) => <SelectedProjectPage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick}/>}/>
               <Route exact path="/contact/" render={(route) => <ContactPage match={route.match} theme={theme} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
             </Switch>
 
