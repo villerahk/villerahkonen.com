@@ -32,7 +32,10 @@ class NavBar extends Component {
           } else if (path === '/contact/') {
             this.selectedPage('Contact')
 
-        } else {console.log('Something went wrong with navbar.component.jsx.')}
+            } else if (path === '/projects/:id') {
+              this.selectedPage('Projects')
+
+      } else {console.log('Something went wrong with navbar.component.jsx.')}
     
   }
 
