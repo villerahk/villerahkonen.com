@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Route, Switch, Redirect } from "react-router-dom";
 
 import LinearProgress from '@material-ui/core/LinearProgress';
