@@ -38,7 +38,9 @@ const projectObjects = [
         4:{id: "HTML5", logo: HTML5},
         5:{id: "CSS3", logo: CSS},
         6:{id: "Trello", logo: Trello},
-        7:{id: "Adobe XD", logo: XD}}
+        7:{id: "Adobe XD", logo: XD}},
+        hiddenImages: false,
+        gitHubButton: false
     },
     {
         title: "VilleRahkonen.com",
@@ -58,7 +60,31 @@ const projectObjects = [
         4:{id: "HTML5", logo: HTML5},
         5:{id: "Sass", logo: sass},
         6:{id: "Trello", logo: Trello},
-        7:{id: "Adobe XD", logo: XD}}
+        7:{id: "Adobe XD", logo: XD}},
+        hiddenImages: false,
+        gitHubButton: false
+    },
+    {
+        title: "Open Source & More",
+        text1: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        text2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        screenshot: screenShot2,
+        recommendationText: "Ville's work has been efficient and precise while maintaining a proper schedule. He has also been considerate of our wishes during development. We consider the result of the work to be of high quality.",
+        recommendationAuthor: "Sami Älli",
+        recommendationTitle: "Director, Accessibility Unit",
+        recommendationOrg: "The Finnish Association on Intellectual and Developmental Disabilities",
+        buttonText: "My GitHub",
+        buttonLink: "https://github.com/villerahk",
+        techLogos: {0:{id: "React", logo: reactLogo},
+        1:{id: "Create React App", logo: CRA},
+        2:{id: "JavaScript (ES6)", logo: JS},
+        3:{id: "Firebase", logo: firebaseLogo},
+        4:{id: "HTML5", logo: HTML5},
+        5:{id: "Sass", logo: sass},
+        6:{id: "Trello", logo: Trello},
+        7:{id: "Adobe XD", logo: XD}},
+        hideImages: true,
+        gitHubButton: true
     }
 ]
 
