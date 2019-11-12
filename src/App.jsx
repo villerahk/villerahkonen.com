@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -91,6 +91,7 @@ render(){
               <Route exact path="/projects/" render={(route) => <ProjectsPage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
               <Route exact path="/projects/:id" render={(route) => <SelectedProjectPage match={route.match} clickHappened={this.state.clickHappened} resetClick={this.resetClick}/>}/>
               <Route exact path="/contact/" render={(route) => <ContactPage match={route.match} theme={theme} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
+              <Route render={() => <Redirect to="/" />} />
             </Switch>
 
         </div></ThemeProvider>

@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react';
+import { Redirect } from 'react-router-dom';
 
 import NavBar from '../../components/navbar.component/navbar.component';
+import Project from '../../components/project.component/project.component';
 
 import screenShot from '../../images/picture-bank-screenshot.png';
 import villeSm from '../../images/ville-bnw-small.png';
-import design from '../../images/design1.png';
+
 import CRA from '../../images/tech.logos/CRA.png';
 import reactLogo from '../../images/tech.logos/react.png';
 import CSS from '../../images/tech.logos/css.png';
@@ -13,12 +15,63 @@ import JS from '../../images/tech.logos/js.png';
 import JSONLogo from '../../images/tech.logos/json.png';
 import Trello from '../../images/tech.logos/trello.png';
 import XD from '../../images/tech.logos/XD.png';
+import sass from '../../images/tech.logos/sass-logo.png'
+import firebaseLogo from '../../images/tech.logos/firebase-logo.png';
 
 import './selected.project.page.scss';
 
-const logoCollection = [reactLogo, CRA, JS, JSONLogo, HTML5, CSS, Trello, XD]
+const projectObjects = [
+    {
+        title: "Picture Bank",
+        text1: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        text2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        screenshot: screenShot,
+        recommendationText: "Ville's work has been efficient and precise while maintaining a proper schedule. He has also been considerate of our wishes during development. We consider the result of the work to be of high quality.",
+        recommendationAuthor: "Sami Älli",
+        recommendationTitle: "Director, Accessibility Unit",
+        recommendationOrg: "The Finnish Association on Intellectual and Developmental Disabilities",
+        buttonText: "Live App",
+        buttonLink: "https://kuvapankki.papunet.net/",
+        techLogos: {0:{id: "React", logo: reactLogo},
+        1:{id: "Create React App", logo: CRA},
+        2:{id: "JavaScript (ES6)", logo: JS},
+        3:{id: "JSON API", logo: JSONLogo},
+        4:{id: "HTML5", logo: HTML5},
+        5:{id: "CSS3", logo: CSS},
+        6:{id: "Trello", logo: Trello},
+        7:{id: "Adobe XD", logo: XD}}
+    },
+    {
+        title: "VilleRahkonen.com",
+        text1: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        text2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        screenshot: screenShot,
+        recommendationText: "Ville's work has been efficient and precise while maintaining a proper schedule. He has also been considerate of our wishes during development. We consider the result of the work to be of high quality.",
+        recommendationAuthor: "Sami Älli",
+        recommendationTitle: "Director, Accessibility Unit",
+        recommendationOrg: "The Finnish Association on Intellectual and Developmental Disabilities",
+        buttonText: "Source Code",
+        buttonLink: "https://github.com/villerahk/villerahkonen.com",
+        techLogos: {0:{id: "React", logo: reactLogo},
+        1:{id: "Create React App", logo: CRA},
+        2:{id: "JavaScript (ES6)", logo: JS},
+        3:{id: "Firebase", logo: firebaseLogo},
+        4:{id: "HTML5", logo: HTML5},
+        5:{id: "Sass", logo: sass},
+        6:{id: "Trello", logo: Trello},
+        7:{id: "Adobe XD", logo: XD}}
+    }
+]
 
-export default function ProjectsPage(props) {
+    
+
+export default function SelectedProjectPage(props) {
+
+    const id = props.match.params.id
+
+    if (!projectObjects[id]) {
+        return(<Redirect to="/" />)
+    }
 
     if (window.innerWidth < 1366) {
 
@@ -37,44 +90,8 @@ export default function ProjectsPage(props) {
         <Fragment>
             <NavBar match={props.match} clickHappened={props.clickHappened} resetClick={props.resetClick}/>
                 <div className="Content">
-                    <div className="ProjectInfo">
-                        <h3>Picture Bank</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    </div>
-
-                    <div className="ProjectMaterial">
-                        <div className="ColumnOne">
-                            <img src={screenShot} alt="screenshot" className="Screenshot" />
-                            <img src={design} alt="Design" className="Design" />
-                            <p>"Ville's work has been efficient and precise while maintaining a proper schedule. He has also been considerate of our wishes during development. We consider the result of the work to be of high quality."</p>
-                            <p><span>Sami Älli</span>
-                            <span>Director, Accessibility Unit</span>
-                            <span>The Finnish Association on Intellectual and Developmental Disabilities</span></p>
-                            <img src={design} alt="Design" className="Design" />
-                        </div>
-
-                        <div className="ColumnTwo">
-                        <p><strong>Tech's used:</strong></p>
-                        <div className="LogoPair">
-                        <img src={logoCollection[0]} alt={logoCollection[0]} width="40" height="40" /><img src={logoCollection[1]} alt={logoCollection[1]} width="40" height="40" />
-                        </div>
-                        <div className="LogoPair">
-                        <img src={logoCollection[2]} alt={logoCollection[2]} width="40" height="40" /><img src={logoCollection[3]} alt={logoCollection[3]} width="40" height="40" />
-                        </div>
-                        <div className="LogoPair">
-                        <img src={logoCollection[4]} alt={logoCollection[4]} width="40" height="40" /><img src={logoCollection[5]} alt={logoCollection[5]} width="40" height="40" />
-                        </div>
-                        <div className="LogoPair">
-                        <img src={logoCollection[6]} alt={logoCollection[6]} width="40" height="40" /><img src={logoCollection[7]} alt={logoCollection[7]} width="40" height="40" />
-                        </div>
-                        
-                        {/* <Link to={}><Button variant="contained" color="primary">{}</Button></Link>
-                        <a href={} target="_blank" rel="noopener noreferrer"><Button variant="contained" color="secondary" className={}>{}</Button></a> */}
-                        </div>
-                    </div>
-
-                </div>
+                   <Project project={projectObjects[id]} />
+                </div>     
         </Fragment>
     )}
 }
