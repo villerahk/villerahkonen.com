@@ -5,7 +5,6 @@ import Button from '@material-ui/core/Button';
 import Tooltip from '@material-ui/core/Tooltip';
 
 import design from '../../images/design1.png';
-import villeSm from '../../images/ville-bnw-small.png';
 
 import './project.component.scss';
 

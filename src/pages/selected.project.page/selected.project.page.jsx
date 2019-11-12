@@ -4,7 +4,8 @@ import { Redirect } from 'react-router-dom';
 import NavBar from '../../components/navbar.component/navbar.component';
 import Project from '../../components/project.component/project.component';
 
-import screenShot from '../../images/picture-bank-screenshot.png';
+import screenShot from '../../images/screenshot-mockups.png';
+import screenShot2 from '../../images/screenshot-mockups2.png';
 import villeSm from '../../images/ville-bnw-small.png';
 
 import CRA from '../../images/tech.logos/CRA.png';
@@ -17,8 +18,6 @@ import Trello from '../../images/tech.logos/trello.png';
 import XD from '../../images/tech.logos/XD.png';
 import sass from '../../images/tech.logos/sass-logo.png'
 import firebaseLogo from '../../images/tech.logos/firebase-logo.png';
-
-import './selected.project.page.scss';
 
 const projectObjects = [
     {
@@ -45,7 +44,7 @@ const projectObjects = [
         title: "VilleRahkonen.com",
         text1: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         text2: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        screenshot: screenShot,
+        screenshot: screenShot2,
         recommendationText: "Ville's work has been efficient and precise while maintaining a proper schedule. He has also been considerate of our wishes during development. We consider the result of the work to be of high quality.",
         recommendationAuthor: "Sami Älli",
         recommendationTitle: "Director, Accessibility Unit",
@@ -63,8 +62,6 @@ const projectObjects = [
     }
 ]
 
-    
-
 export default function SelectedProjectPage(props) {
 
     const id = props.match.params.id
@@ -79,7 +76,7 @@ export default function SelectedProjectPage(props) {
         <Fragment>
             <NavBar match={props.match} clickHappened={props.clickHappened} resetClick={props.resetClick}/>
                 <div className="Content">
-                    <p>Testing selected project page!</p>
+                    <Project project={projectObjects[id]} />
                 </div>
             <img src={villeSm} alt="Ville" className="Ville" />
         </Fragment>
