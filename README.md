@@ -1,6 +1,6 @@
 ## VilleRahkonen.com
 
-Live application will be published as soon as it's ready. Target is to be done by 10th of November 2019.
+Live application will be published as soon as it's ready. Target for version 1.0 is to be done by 15th of November 2019.
 
 ### Objective of the project
 
