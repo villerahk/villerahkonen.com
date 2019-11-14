@@ -15,8 +15,7 @@ class NavBar extends Component {
           selectedPage: undefined,
           selectedTab: undefined,
           justifyContent: 'matrix(0.33333, 0, 0, 1, -266.67, 0)',
-          menuClosed: true,
-          imageOut: ''
+          menuClosed: true
         }
 
   }
@@ -55,12 +54,6 @@ class NavBar extends Component {
     }
   }
 
-  componentWillUnmount(){
-    this.setState({
-      imageOut: 'ImageIn'
-    })
-  }
-
 menuButtonClick(){
   this.setState({
     menuClosed: !this.state.menuClosed
@@ -83,7 +76,7 @@ selectedPage(newValue){
 
 render(){
 
-  const {selectedPage, selectedTab, menuClosed, justifyContent, imageOut} = this.state
+  const {selectedPage, selectedTab, menuClosed, justifyContent} = this.state
 
   if (window.innerWidth < 1366) {
 
@@ -127,7 +120,7 @@ render(){
         </div>
 
       </div>
-      <div className="ColumnImage" style={{ animation: imageOut }} />
+      <div className="ColumnImage" />
     </Fragment>
     )}
 }
