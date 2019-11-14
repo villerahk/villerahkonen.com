@@ -8,14 +8,20 @@ $support1: #645C48;
 $effect2: #51789A;
 $support2: #425667;
 
-.Design {
+  .Design {
     width: 100%;
+    padding: 15px 0px;
   }
   
-  .WelcomeText {
+  .ContactText {
     text-align: center;
     margin: auto;
     max-width: 460px;
+
+    p {
+      padding: 10px 0px;
+    }
+
   }
 
   .ContactButtons {
@@ -57,16 +63,16 @@ $support2: #425667;
 
   @media only screen and (min-width: 1366px) {
 
-    .WelcomeText {
+    .ContactText {
       margin: auto;
       max-width: 800px;
-      margin-top: 150px;
+    
+    p {
+      text-align: center;
+      font-size: 22px;
     }
 
-    .WelcomeText p {
-      text-align: center;
-      font-size: 24px;
-    }
+  }
 
     .ContactButtons {
       margin: 10px auto 30px auto;
@@ -80,7 +86,7 @@ $support2: #425667;
     }
 
     .LinkedIn {
-      height: 30px;
+      height: 26px;
       width: auto;
     }
 

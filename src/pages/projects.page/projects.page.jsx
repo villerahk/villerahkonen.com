@@ -9,7 +9,7 @@ export default function ProjectsPage(props) {
 
     const item1 = {
         title: 'Picture Bank',
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        text: "Picture Bank is a free web application for helping disabled people with daily tasks and communication via pictures. It contains thousands of pictures and eight different picture types. The user can either search for pictures or browse through the bank's various categories.",
         button1: 'Read More',
         button2: 'Live App',
         link1: '/projects/0',
@@ -19,7 +19,7 @@ export default function ProjectsPage(props) {
 
     const item2 = {
         title: 'VilleRahkonen.com',
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        text: "The website you are currently visiting. The purpose of this project was to create a platform from scratch for myself, where I can showcase my new projects and skills. New content and features will be constantly added, and the source code will always be fully visible on GitHub.",
         button1: 'Read More',
         button2: 'Source Code',
         link1: '/projects/1',
@@ -28,8 +28,8 @@ export default function ProjectsPage(props) {
     }
 
     const item3 = {
-        title: 'Open Source & More',
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        title: 'Experience, Open Source & More',
+        text: "Even tho my actual IT work experience is relatively small timewise, I have done lots of different kind of work already. I'm also looking to start contributing to some Open Source projects soon. You can read more of all this in this section.",
         button1: 'Read More',
         button2: 'My GitHub',
         link1: '/projects/2',

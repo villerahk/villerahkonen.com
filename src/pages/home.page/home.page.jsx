@@ -11,22 +11,36 @@ class HomePage extends Component {
 
     render(){
 
+    const p1 = "Hey and welcome to my website!"
+    const p2 = "I'm Ville Rahkonen (26), Software Engineer from Hämeenlinna, Finland."
+    const p3 = "On this website you can find all kinds of things about me and my latest development projects."
+    const p4 = "For those who don't know me yet - here's me in five traits:"
+    const p5 = ["Team player", "Hardworking", "Positive attitude", "Humorous & easy-going", "Considerate towards others"]
+    const p6 = "And by the way... I’m currently looking for work anywhere in Europe or North America. I’m available to relocate long-term and start working in February 2020, so don’t hesitate to contact me!"
+
     if (window.innerWidth < 1366) {
 
     return(
         <Fragment>
             <NavBar match={this.props.match} clickHappened={this.props.clickHappened} resetClick={this.props.resetClick} color="secondary"/>
             <div className="Content">
-            <div className="WelcomeText">
-
-                <img src={design} alt="Design" className="Design" />
-                    <p>Hey, and welcome to my website! My name is Ville Rahkonen, I’m 26 years old Software Engineer from Hämeenlinna, Finland.</p>
-                    <p>On this website you can find my latest projects and contact information. If you want to know more about my work experience and education, please visit my LinkedIn profile.</p>
-                    <p>I’m currently looking for work anywhere in the world and I’m available to relocate and start in February 2020. Please don’t hesitate in contacting me, I would love to hear about your company.</p>
-                <img src={design} alt="Design" className="Design" />
+                <div className="WelcomeText">
+                    <p>{p1}</p>
+                    <p>{p2}</p>
+                    <p>{p3}</p>
+                    <img src={design} alt="Design" className="Design" />
+                    <p>{p4}</p>
+                    <p><ul>
+                        <li>{p5[0]}</li>
+                        <li>{p5[1]}</li>
+                        <li>{p5[2]}</li>
+                        <li>{p5[3]}</li>
+                        <li>{p5[4]}</li>
+                    </ul></p>
+                    <img src={design} alt="Design" className="Design" />
+                    <p>{p6}</p>
+                </div>
             </div>
-            </div>
-
             <img src={villeSm} alt="Ville" className="Ville" />
         </Fragment>
 
@@ -36,16 +50,23 @@ class HomePage extends Component {
         <Fragment>
             <NavBar match={this.props.match} clickHappened={this.props.clickHappened} resetClick={this.props.resetClick}/>
             <div className="Content">
-            <div className="WelcomeText">
-
-                <img src={design} alt="Design" className="Design" />
-                    <p>Hey, and welcome to my website! My name is Ville Rahkonen, I’m 26 years old Software Engineer from Hämeenlinna, Finland.</p>
-                    <p>On this website you can find my latest projects and contact information. If you want to know more about my work experience and education, please visit my LinkedIn profile.</p>
-                    <p>I’m currently looking for work anywhere in the world and I’m available to relocate and start in February 2020. Please don’t hesitate in contacting me, I would love to hear about your company.</p>
-                <img src={design} alt="Design" className="Design" />
+                <div className="WelcomeText">
+                    <p>{p1}</p>
+                    <p>{p2}</p>
+                    <p>{p3}</p>
+                    <img src={design} alt="Design" className="Design" />
+                    <p>{p4}</p>
+                    <p><ul>
+                        <li>{p5[0]}</li>
+                        <li>{p5[1]}</li>
+                        <li>{p5[2]}</li>
+                        <li>{p5[3]}</li>
+                        <li>{p5[4]}</li>
+                    </ul></p>
+                    <img src={design} alt="Design" className="Design" />
+                    <p>{p6}</p>    
+                </div>
             </div>
-            </div>
-
         </Fragment>
     )}
 } 
