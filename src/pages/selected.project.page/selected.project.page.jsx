@@ -6,7 +6,7 @@ import Project from '../../components/project.component/project.component';
 
 import screenShot from '../../images/screenshot-mockups.png';
 import screenShot2 from '../../images/screenshot-mockups2.png';
-import villeSm from '../../images/ville-bnw-small.png';
+import villeSm from '../../images/profile-ville-bnw2.png';
 
 import CRA from '../../images/tech.logos/CRA.png';
 import reactLogo from '../../images/tech.logos/react.png';

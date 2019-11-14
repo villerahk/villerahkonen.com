@@ -26,10 +26,10 @@ $support2: #425667;
     justify-content: center;
   }
 
-  .Gmail {
+  .Email {
     height: 18px;
     width: auto;
-    padding: 8px;
+    padding: 6px 0px 8px 8px;
   }
 
   .LinkedIn {
@@ -72,10 +72,11 @@ $support2: #425667;
       margin: 10px auto 30px auto;
     }
 
-    .Gmail {
+    .Email {
       height: 30px;
       width: auto;
-      padding: 8px;
+      padding: 6px 0px 8px 8px;
+      margin-bottom: 2px;
     }
 
     .LinkedIn {

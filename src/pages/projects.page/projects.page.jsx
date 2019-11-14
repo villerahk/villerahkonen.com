@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import NavBar from '../../components/navbar.component/navbar.component';
 import ProjectItem from '../../components/project.item.component/project.item.component';
 
-import villeSm from '../../images/ville-bnw-small.png';
+import villeSm from '../../images/profile-ville-bnw2.png';
 
 export default function ProjectsPage(props) {
 

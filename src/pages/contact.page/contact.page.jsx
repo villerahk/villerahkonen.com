@@ -5,9 +5,9 @@ import NavBar from '../../components/navbar.component/navbar.component';
 import Button from '@material-ui/core/Button';
 
 import design from '../../images/design1.png';
-import villeSm from '../../images/ville-bnw-small.png';
+import villeSm from '../../images/profile-ville-bnw2.png';
 import linkedIn from '../../images/linkdin.png';
-import gmail from '../../images/gmail.png';
+import email from '../../images/email-icon.png';
 
 import './contact.page.scss';
 
@@ -37,7 +37,7 @@ copyEmail(){
                 
 
                 <div className="ContactButtons">
-                <Button onClick={() => this.copyEmail()} variant="contained" color="secondary">Email Me<img src={gmail} alt="Gmail" className="Gmail"  /></Button>
+                <Button onClick={() => this.copyEmail()} variant="contained" color="primary">Email<img src={email} alt="Email" className="Email"  /></Button>
                 <a href="https://www.linkedin.com/in/ville-rahkonen-685117137/" target="_blank" rel="noopener noreferrer"><Button variant="contained" color="secondary"><img src={linkedIn} alt="LinkedIn" className="LinkedIn" /></Button></a>
                 </div>
 
@@ -62,7 +62,7 @@ copyEmail(){
                 <p>I’m seriously looking for work anywhere in the world and I’m available to relocate and start in February 2020. Please don’t hesitate in contacting me, I would love to hear about your company.</p>
 
                 <div className="ContactButtons">
-                <Button onClick={() => this.copyEmail()} variant="contained" color="secondary">Email Me<img src={gmail} alt="Gmail" className="Gmail" /></Button>
+                <Button onClick={() => this.copyEmail()} variant="contained" color="primary">Email<img src={email} alt="Email" className="Email" /></Button>
                 <a href="https://www.linkedin.com/in/ville-rahkonen-685117137/" target="_blank" rel="noopener noreferrer"><Button variant="contained" color="secondary"><img src={linkedIn} alt="LinkedIn" className="LinkedIn" /></Button></a>
                 </div>
 

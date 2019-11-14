@@ -31,7 +31,7 @@ constructor(){
 }
 
 componentDidMount() {
-  setInterval(() => this.countTo100(this.state.loadingValue), 275)
+  setInterval(() => this.countTo100(this.state.loadingValue), 325)
   }
 
 countTo100(n){
@@ -45,7 +45,7 @@ countTo100(n){
     clearInterval()
     setTimeout(() => this.setState({
       loadingDone: true
-    }),1200)
+    }),1300)
   }
 }
 

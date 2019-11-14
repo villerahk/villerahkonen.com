@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react';
 import NavBar from '../../components/navbar.component/navbar.component';
 
 import design from '../../images/design1.png';
-import villeSm from '../../images/ville-bnw-small.png';
+import villeSm from '../../images/profile-ville-bnw2.png';
 
 import './home.page.scss';
 

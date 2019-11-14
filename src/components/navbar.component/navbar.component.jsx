@@ -12,9 +12,11 @@ class NavBar extends Component {
         super(props)
 
         this.state = {
-          selectedPage: 'Home',
-          selectedTab: 0,
-          menuClosed: true
+          selectedPage: undefined,
+          selectedTab: undefined,
+          justifyContent: 'matrix(0.33333, 0, 0, 1, -266.67, 0)',
+          menuClosed: true,
+          imageOut: ''
         }
 
   }
@@ -22,7 +24,7 @@ class NavBar extends Component {
   componentDidMount(){
 
     const { path } = this.props.match
-    
+
       if (path === '/'){
         this.selectedPage('Home')
 
@@ -53,27 +55,35 @@ class NavBar extends Component {
     }
   }
 
+  componentWillUnmount(){
+    this.setState({
+      imageOut: 'ImageIn'
+    })
+  }
+
 menuButtonClick(){
   this.setState({
     menuClosed: !this.state.menuClosed
   })
 }
 
-selectedPage(x){
+selectedPage(newValue){
   let y = 0
-  if (x === 'Home') {y = 0}
-  else if (x === 'Projects') {y = 1}
-  else {y = 2}
+  let z = ''
+  if (newValue === 'Home') {y = 0; z = 'matrix(0.33333, 0, 0, 1, -266.67, 0)'}
+  else if (newValue === 'Projects') {y = 1; z = 'matrix(0.33333, 0, 0, 1, 0, 0)'}
+  else {y = 2; z = 'matrix(0.33333, 0, 0, 1, 266.67, 0)'}
   this.setState({
-    selectedPage: x,
+    selectedPage: newValue,
     selectedTab: y,
-    menuClosed: true
+    menuClosed: true,
+    justifyContent: z
   })
 }
 
 render(){
 
-  const {selectedPage, selectedTab, menuClosed} = this.state
+  const {selectedPage, selectedTab, menuClosed, justifyContent, imageOut} = this.state
 
   if (window.innerWidth < 1366) {
 
@@ -106,15 +116,18 @@ render(){
         </div>
 
         <div className="ColumnNavigation">
-          <Tabs variant="fullWidth" value={selectedTab} indicatorColor="primary" textColor="primary" centered>  
+          <Tabs value={selectedTab} variant="fullWidth" indicatorColor="primary" textColor="primary" centered>  
             <Tab label="Home" component={Link} to={"/"} color="primary" onClick={() => this.selectedPage('Home')}></Tab>
             <Tab label="Projects" component={Link} to={"/projects/"} onClick={() => this.selectedPage('Projects')}></Tab>
             <Tab label="Contact" component={Link} to={"/contact/"} onClick={() => this.selectedPage('Contact')}></Tab>
           </Tabs>
+          <div className="IndicatorContainer">
+            <div className="TabIndicator" style={{ transform: justifyContent }}/>
+          </div>
         </div>
 
       </div>
-      <div className="ColumnImage" />
+      <div className="ColumnImage" style={{ animation: imageOut }} />
     </Fragment>
     )}
 }

@@ -92,7 +92,40 @@ $support2: #425667;
 
       img {
         padding: 8px;
+        animation: LogoRotate2;
+        animation-duration: 0.4s;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
       }
+
+      img:hover {
+        animation: LogoRotate;
+        animation-duration: 0.4s;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+}
+
+@keyframes LogoRotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(-15deg);
+  }
+    }
+
+    @keyframes LogoRotate2 {
+      from {
+        transform: rotateZ(-15deg);
+      }
+    
+      to {
+        transform: rotateZ(0deg);
+      }
+        }
 
       .MuiButton-root {
         margin: 8px !important;
