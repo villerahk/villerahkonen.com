@@ -14,8 +14,8 @@ return(
     <div className="ProjectItem">
         <h3>{item.title}</h3>
         <p>{item.text}</p>
-        <Link to={item.link1}><Button variant="contained" color="primary" onClick={() => {window.scrollTo(0,0)}}>{item.button1}</Button></Link>
-        <a href={item.link2} target="_blank" rel="noopener noreferrer"><Button variant="contained" color="secondary" className={item.gitHubButton ? "GitHubButton" : ""}>{item.button2}</Button></a>
+        <Link to={item.link1}><Button variant="contained" color="primary" className={item.hideButton ? "HideButton" : ""} onClick={() => {window.scrollTo(0,0)}}>{item.button1}</Button></Link>
+        <a href={item.link2} target="_blank" rel="noopener noreferrer"><Button variant="contained" color="secondary" className={item.hideButton ? "HideButton" : ""}>{item.button2}</Button></a>
     </div>
 
 )}

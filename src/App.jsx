@@ -93,7 +93,7 @@ render(){
               <Route exact path="/contact/" render={(route) => <ContactPage match={route.match} theme={theme} clickHappened={this.state.clickHappened} resetClick={this.resetClick} />} />
               <Route render={() => <Redirect to="/" />} />
             </Switch>
-
+            
         </div></ThemeProvider>
         )}
   }

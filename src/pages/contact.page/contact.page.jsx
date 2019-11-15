@@ -8,6 +8,7 @@ import design from '../../images/design1.png';
 import villeSm from '../../images/profile-ville-bnw2.png';
 import linkedIn from '../../images/linkdin.png';
 import email from '../../images/email-icon.png';
+import gitHub from '../../images/github.png';
 
 import './contact.page.scss';
 
@@ -24,8 +25,8 @@ copyEmail(){
     render(){
 
     const p1 = "You made it this far on my website, so why don't you send me an email or a LinkedIn connection request?"
-    const p2 = "I’m currently looking for work anywhere in Europe or North America. I’m available to relocate long-term and start working in February 2020, so don’t hesitate to contact me!"
-    const p3 = "You can copy my email address or visit my LinkedIn profile from below."
+    const p2 = "I’m currently looking for work in Europe or North America. I’m willing to relocate long-term and available to start working in January 2020."
+    const p3 = "You can copy my email address, visit my LinkedIn or GitHub profile from below."
 
     if (window.innerWidth < 1366) {
 
@@ -36,11 +37,12 @@ copyEmail(){
                 <div className="ContactText">
                     <p>{p1}</p>
                     <p>{p2}</p>
-                    <p>{p3}</p>
                     <img src={design} alt="Design" className="Design" />
+                    <p>{p3}</p>
                     <div className="ContactButtons">
                         <Button onClick={() => this.copyEmail()} variant="contained" color="primary">Email<img src={email} alt="Email" className="Email" /></Button>
                         <a href="https://www.linkedin.com/in/ville-rahkonen-685117137/" target="_blank" rel="noopener noreferrer"><Button variant="contained" color="secondary"><img src={linkedIn} alt="LinkedIn" className="LinkedIn" /></Button></a>
+                        <a href="https://github.com/villerahk" target="_blank" rel="noopener noreferrer"><Button variant="contained" color="secondary" className="GitHubButton"><img src={gitHub} alt="GitHub" className="GitHub" /></Button></a>
                     </div>      
                     <input type="text" value="ville.rahkonen10@gmail.com" id="myInput" />
                 </div>
@@ -57,11 +59,12 @@ copyEmail(){
                 <div className="ContactText">
                     <p>{p1}</p>
                     <p>{p2}</p>
-                    <p>{p3}</p>
                     <img src={design} alt="Design" className="Design" />
+                    <p>{p3}</p>
                     <div className="ContactButtons">
                         <Button onClick={() => this.copyEmail()} variant="contained" color="primary">Email<img src={email} alt="Email" className="Email" /></Button>
                         <a href="https://www.linkedin.com/in/ville-rahkonen-685117137/" target="_blank" rel="noopener noreferrer"><Button variant="contained" color="secondary"><img src={linkedIn} alt="LinkedIn" className="LinkedIn" /></Button></a>
+                        <a href="https://github.com/villerahk" target="_blank" rel="noopener noreferrer"><Button variant="contained" color="secondary" className="GitHubButton"><img src={gitHub} alt="GitHub" className="GitHub" /></Button></a>
                     </div>      
                     <input type="text" value="ville.rahkonen10@gmail.com" id="myInput" />
                 </div>

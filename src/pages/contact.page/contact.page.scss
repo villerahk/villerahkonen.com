@@ -8,29 +8,28 @@ $support1: #645C48;
 $effect2: #51789A;
 $support2: #425667;
 
-  .Design {
-    width: 100%;
-    padding: 15px 0px;
-  }
-  
   .ContactText {
     text-align: center;
     margin: auto;
     max-width: 460px;
 
     p {
-      padding: 10px 0px;
+      padding: 15px 0px;
+    }
+
+    .Design {
+      width: 100%;
+      padding: 15px 0px;
     }
 
   }
 
   .ContactButtons {
-    width: 90%;
+    width: 100%;
     margin: 5px auto 20px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
-  }
 
   .Email {
     height: 18px;
@@ -39,18 +38,33 @@ $support2: #425667;
   }
 
   .LinkedIn {
-    height: 20px;
+    height: 18px;
+    width: auto;
+  }
+
+  .GitHub {
+    height: 18px;
     width: auto;
   }
 
   .MuiButton-root {
-    margin: 0px 10px !important;
-    width: 145px;
+    margin: 15px 5px !important;
+    width: 90px;
     height: 45px;
 
     font-family: 'Antic Slab', serif !important;
     font-size: 14px !important;
   }
+
+  .GitHubButton {
+    background-color: $navbar-background !important;
+  }
+
+  .GitHubButton:hover {
+    background-color: #111111 !important;
+  }
+
+}
 
   input {
     position: absolute;
@@ -63,6 +77,8 @@ $support2: #425667;
 
   @media only screen and (min-width: 1366px) {
 
+    
+
     .ContactText {
       margin: auto;
       max-width: 800px;
@@ -70,13 +86,19 @@ $support2: #425667;
     p {
       text-align: center;
       font-size: 22px;
+      padding: 15px 0;
+    }
+
+    .Design {
+      width: 100%;
+      padding: 15px 0px;
     }
 
   }
 
     .ContactButtons {
-      margin: 10px auto 30px auto;
-    }
+      margin: 15px auto 30px auto;
+    
 
     .Email {
       height: 30px;
@@ -90,13 +112,20 @@ $support2: #425667;
       width: auto;
     }
 
+    .GitHub {
+      height: 26px;
+      width: auto;
+    }
+
     .MuiButton-root {
-      margin: 0px 15px !important;
-      width: 240px;
+      margin: 15px 10px !important;
+      width: 220px;
       height: 56px;
 
       font-family: 'Antic Slab', serif !important;
       font-size: 18px !important;
     }
+
+  }
 
   }

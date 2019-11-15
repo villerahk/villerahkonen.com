@@ -1,6 +1,6 @@
 ## VilleRahkonen.com
 
-Live application will be published as soon as it's ready. Target for version 1.0 is to be done by 15th of November 2019.
+Live application (version 1.0.0) will be published at https://villerahkonen.com on November 16th 2019.
 
 ### Objective of the project
 
@@ -16,7 +16,7 @@ This project's objective is to demonstrate "a professional-like process" of crea
 6. Set up a repository for the project on GitHub.
 7. Start development with 'Create React App'.
 8. Install the chosen dependencies with npm.
-9. **Development of the application. (CURRENTLY HERE)**
+9. Development of the application.
 10. Run all the required tests to confirm quality of the applicaton.
 11. Get and set up the chosen domain for production.
 12. Publish the app.

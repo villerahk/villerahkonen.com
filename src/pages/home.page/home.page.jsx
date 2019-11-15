@@ -14,9 +14,10 @@ class HomePage extends Component {
     const p1 = "Hey and welcome to my website!"
     const p2 = "I'm Ville Rahkonen (26), Software Engineer from Hämeenlinna, Finland."
     const p3 = "On this website you can find all kinds of things about me and my latest development projects."
-    const p4 = "For those who don't know me yet - here's me in five traits:"
+    const p4 = "For those who don't know me yet - here's me in 5 traits:"
     const p5 = ["Team player", "Hardworking", "Positive attitude", "Humorous & easy-going", "Considerate towards others"]
-    const p6 = "And by the way... I’m currently looking for work anywhere in Europe or North America. I’m available to relocate long-term and start working in February 2020, so don’t hesitate to contact me!"
+    const p6 = "And by the way... I’m currently looking for work in Europe or North America. I’m willing to relocate long-term and available to start working in January 2020."
+    const p7 = "So if you have an open position - send me a message and let's have a chat!"
 
     if (window.innerWidth < 1366) {
 
@@ -39,6 +40,7 @@ class HomePage extends Component {
                     </ul></p>
                     <img src={design} alt="Design" className="Design" />
                     <p>{p6}</p>
+                    <p>{p7}</p>
                 </div>
             </div>
             <img src={villeSm} alt="Ville" className="Ville" />
@@ -64,7 +66,8 @@ class HomePage extends Component {
                         <li>{p5[4]}</li>
                     </ul></p>
                     <img src={design} alt="Design" className="Design" />
-                    <p>{p6}</p>    
+                    <p>{p6}</p>   
+                    <p>{p7}</p> 
                 </div>
             </div>
         </Fragment>

@@ -9,32 +9,32 @@ export default function ProjectsPage(props) {
 
     const item1 = {
         title: 'Picture Bank',
-        text: "Picture Bank is a free web application for helping disabled people with daily tasks and communication via pictures. It contains thousands of pictures and eight different picture types. The user can either search for pictures or browse through the bank's various categories.",
+        text: "Picture Bank is a free web application for helping disabled people with daily tasks and communication with pictures. The application contains thousands of pictures divided into eight picture types. User can either search for pictures or browse through the bank's various categories.",
         button1: 'Read More',
         button2: 'Live App',
         link1: '/projects/0',
         link2: 'https://kuvapankki.papunet.net',
-        gitHubButton: false
+        hideButton: false
     }
 
     const item2 = {
         title: 'VilleRahkonen.com',
-        text: "The website you are currently visiting. The purpose of this project was to create a platform from scratch for myself, where I can showcase my new projects and skills. New content and features will be constantly added, and the source code will always be fully visible on GitHub.",
+        text: "The website you are currently visiting. The purpose of this project was to create a platform or rather a playground for myself, where I can showcase my new projects and skills. The other objective was also to demonstrate 'a professional-like process' of creating a small-to-mid sized web app and taking it to production. New content and features will be constantly added, and the source code and documentation will always be fully visible on GitHub.",
         button1: 'Read More',
         button2: 'Source Code',
         link1: '/projects/1',
         link2: 'https://github.com/villerahk/villerahkonen.com',
-        gitHubButton: false
+        hideButton: false
     }
 
     const item3 = {
-        title: 'Experience, Open Source & More',
-        text: "Even tho my actual IT work experience is relatively small timewise, I have done lots of different kind of work already. I'm also looking to start contributing to some Open Source projects soon. You can read more of all this in this section.",
-        button1: 'Read More',
-        button2: 'My GitHub',
-        link1: '/projects/2',
-        link2: 'https://github.com/villerahk',
-        gitHubButton: true
+        title: 'More to come...',
+        text: "There's not that many projects yet to showcase publicly, but I already have some ideas in my mind for the next ones. If you're interested in my work experience or education, you should check out my LinkedIn profile from the Contact page. I have also linked my GitHub profile there.",
+        button1: '',
+        button2: '',
+        link1: '',
+        link2: '',
+        hideButton: true
     }
 
     if (window.innerWidth < 1366) {

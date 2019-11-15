@@ -19,6 +19,14 @@ return(
         <h3>{project.title}</h3>
             <p>{project.text1}</p>
             <p>{project.text2}</p>
+            <ul>
+                <h4>{project.boxTitle}</h4>
+                <li><p><strong>{project.bulletTitles[0]}</strong>{project.bulletTexts[0]}</p></li>
+                <li><p><strong>{project.bulletTitles[1]}</strong>{project.bulletTexts[1]}</p></li>
+                <li><p><strong>{project.bulletTitles[2]}</strong>{project.bulletTexts[2]}</p></li>
+                <li><p><strong>{project.bulletTitles[3]}</strong>{project.bulletTexts[3]}</p></li>
+                <li><p><strong>{project.bulletTitles[4]}</strong>{project.bulletTexts[4]}</p></li>
+            </ul>
     </div>
 
     <div className={project.hideImages ? "hidden" : "ProjectMaterial"}>
@@ -82,7 +90,7 @@ return(
         </div>
 
         <div className="ColumnTwo">  
-            <a href={project.buttonLink} target="_blank" rel="noopener noreferrer"><Button variant="contained" color="secondary" className={project.gitHubButton ? "GitHubButton" : ""}>{project.buttonText}</Button></a>
+            <a href={project.buttonLink} target="_blank" rel="noopener noreferrer"><Button variant="contained" color="secondary">{project.buttonText}</Button></a>
             <Link to="/projects/"><Button variant="contained" color="primary" onClick={() => {window.scrollTo(0,0)}}>Go Back</Button></Link>
         </div>
 

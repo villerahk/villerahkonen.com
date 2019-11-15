@@ -33,13 +33,10 @@ $support2: #425667;
     font-size: 14px !important;
   }
 
-  .GitHubButton {
-    background-color: $navbar-background !important;
-  }
+}
 
-  .GitHubButton:hover {
-    background-color: #111111 !important;
-  }
+.HideButton {
+  display: none !important;
 }
 
   @media only screen and (min-width: 1366px) {

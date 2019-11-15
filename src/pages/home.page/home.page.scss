@@ -8,14 +8,16 @@ $support1: #645C48;
 $effect2: #51789A;
 $support2: #425667;
 
-.Design {
-    width: 100%;
-    padding: 15px 0px;
-  }
+
   
   .WelcomeText {
     margin: auto;
     max-width: 460px;
+
+    .Design {
+      width: 100%;
+      padding: 10px 0px;
+    }
   
     p {
     padding: 10px 0px;
@@ -32,16 +34,17 @@ $support2: #425667;
 
   @media only screen and (min-width: 1366px) {
 
-    .Design {
-      width: 100%;
-      padding: 30px 0px;
-    }
+    
 
     .WelcomeText {
       margin: auto;
       max-width: 800px;
       padding-bottom: 80px;
     
+      .Design {
+        width: 100%;
+        padding: 15px 0px;
+      }
 
     p {
       text-align: center;
