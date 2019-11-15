@@ -52,7 +52,7 @@ const projectObjects = [
     {
         title: "VilleRahkonen.com",
         text1: "The website you are currently visiting. The purpose of this project was to create a platform or rather a playground for myself, where I can showcase my new projects and skills. The other objective was also to demonstrate 'a professional-like process' of creating a small-to-mid sized web app and taking it to production. New content and features will be constantly added, and the source code and documentation will always be fully visible on GitHub.",
-        text2: "The whole project took about 55-60 hours of work to be published as a 'version 1.0.0' when including all of the designing work and other preparations among development. All in all I'm personally very pleased with the end result of the web app, and will definitely keep adding new features and content in it regularly.",
+        text2: "The whole project took about 50 hours of work to be published as a 'version 1.0.0' when including all of the designing work and other preparations among development. All in all I'm personally very pleased with the end result of the web app, and will definitely keep adding new features and content in it regularly.",
         boxTitle: "Project's steps briefly",
         bulletTitles: [],
         bulletTexts: ["Set up a Trello board for projects progress management, and split major tasks into smaller ones for more specific management.",
