@@ -1,6 +1,6 @@
 ## VilleRahkonen.com
 
-Live application (version 1.0.0) will be published at https://villerahkonen.com on November 16th 2019.
+The application (version 1.0.0) is now LIVE at https://villerahkonen.com
 
 ### Objective of the project
 
