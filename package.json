@@ -1,6 +1,6 @@
 {
   "name": "villerahkonen.com",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "private": false,
   "dependencies": {
     "@material-ui/core": "^4.5.2",
