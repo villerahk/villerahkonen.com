@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from "react-router-dom";
 
+import * as firebase from "firebase/app";
+import firebaseConfig from './firebase.js'
+
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import palette from './theme.json';
@@ -13,6 +16,8 @@ import SelectedProjectPage from './pages/selected.project.page/selected.project.
 import logo from './images/ville-logo.png';
 
 import './App.scss';
+
+firebase.initializeApp(firebaseConfig);
 
 const theme = createMuiTheme(palette)
 
